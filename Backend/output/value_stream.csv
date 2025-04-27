@@ -1,0 +1,9 @@
+Stage Name,Description,Responsible Party,Duration,Inputs,Outputs,Risks,Tools/Systems,Compliance Check
+Client Onboarding,Initial setup and registration of clients.,Client Services,1-2 days,Client documents,Client profile created,Identification issues,CRM,Yes
+Order Management,"Processing client orders, including receiving and validating them.",Trading Desk,1 day,Order request,Validated orders,Order errors,Trading software,Yes
+Trade Execution,Executing trades on behalf of clients.,Trading Desk,Real-time,Validated orders,Executed trades,Market volatility,Trading platform,Yes
+Settlement Processing,Finalizing trade transactions and processing settlements.,Operations,2-3 days,Executed trades,Settlements completed,Payment delays,Settlement system,Yes
+Risk Management,Assessing risks associated with trades.,Risk Management,Ongoing,Trade data,Risk assessments,Underestimation,Risk management tools,Yes
+Reporting,Generating investment reports and performance summaries for clients.,Reporting Team,Weekly/Monthly,Trade data,Reports produced,Misreporting,Reporting systems,Yes
+Account Maintenance,Ongoing management of client accounts.,Client Services,Ongoing,Client requests,Updated client accounts,Service delays,CRM,Yes
+Compliance Check,Verifying adherence to regulatory requirements and conducting audits.,Compliance Team,Per transaction,All outputs,Compliance verified,Regulatory breaches,Compliance software,Yes

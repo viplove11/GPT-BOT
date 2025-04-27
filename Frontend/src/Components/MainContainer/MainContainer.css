@@ -1,0 +1,397 @@
+/* MainContainer.css */
+
+/* ===== Main Layout ===== */
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: white;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo,
+.logo-div {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.icon-image,
+.logo-image {
+  height: 24px;
+  width: auto;
+  vertical-align: middle;
+}
+
+/* ===== Chat Area ===== */
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Empty chat state */
+.empty-chat-message {
+  text-align: center;
+  color: #888;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Scrollbar Styling */
+.chat-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: #f0f2f5;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* ===== Messages ===== */
+.message {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fixed width constraints for messages */
+.message-user {
+  align-self: flex-end;
+  max-width: 70%;
+}
+
+.message-bot {
+  align-self: flex-start;
+  max-width: 85%; /* Wider for bot messages with tables */
+  min-width: 200px; /* Ensure minimum width */
+  width: 100%; /* Ensure it takes full available width within constraints */
+  box-sizing: border-box; /* Prevent padding from causing overflow */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message-content {
+  padding: 12px 16px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  position: relative;
+  width: 100%; /* Take full width of parent */
+  box-sizing: border-box; /* Prevent padding from causing overflow */
+  overflow-x: auto; /* Allow horizontal scrolling for wide content */
+}
+
+.message-user .message-content {
+  background-color: #007bff;
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+}
+
+.message-bot .message-content {
+  background-color: #ffffff;
+  border-bottom-left-radius: 4px;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #888;
+  margin-top: 6px;
+  display: block;
+  text-align: right;
+}
+
+.message-user .message-time {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Loading animation container */
+.loading-container {
+  display: flex;
+  justify-content: flex-start; /* Align loader to the left like bot text */
+  align-items: center;
+  min-height: 24px; /* Match typical text line height */
+  padding: 0; /* Remove extra padding to align with text */
+}
+
+/* Wrapper for markdown content */
+.markdown-wrapper {
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  width: 100%; /* Ensure wrapper takes full width */
+  max-width: 100%; /* Prevent overflow */
+  box-sizing: border-box; /* Ensure padding/margins don't cause overflow */
+}
+
+.markdown-wrapper p {
+  margin: 0.5em 0;
+}
+
+.markdown-wrapper p:first-child {
+  margin-top: 0;
+}
+
+.markdown-wrapper p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Input Area ===== */
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto 16px auto;
+  padding: 12px 16px;
+  gap: 12px;
+  border-radius: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  background-color: #f7f7f8;
+  resize: none;
+  max-height: 120px;
+  transition: all 0.2s;
+  line-height: 1.4;
+  min-height: 24px;
+  overflow-y: auto;
+}
+
+.chat-input:focus {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+/* Send & Attach Buttons */
+.send-button,
+.attach-button {
+  background-color: transparent;
+  color: #666;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.send-button:hover,
+.attach-button:hover {
+  background-color: #f0f0f0;
+}
+
+.send-button.active {
+  color: #007bff;
+}
+
+.send-button:disabled,
+.attach-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== Markdown Content Styling ===== */
+/* Code blocks */
+.markdown-wrapper pre {
+  background-color: #f7f7f8;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 10px 0;
+}
+
+.markdown-wrapper code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9em;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Lists */
+.markdown-wrapper ul,
+.markdown-wrapper ol {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+/* ===== Enhanced Table Styling ===== */
+.markdown-wrapper table {
+  width: 100%;
+  max-width: 100%; /* Ensure table doesn't exceed container */
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 16px 0;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  display: block; /* Enable horizontal scrolling */
+  font-size: 14px; /* Slightly smaller font for better fit */
+}
+
+/* Table container for better scroll handling */
+.markdown-wrapper div:has(table) {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 10px 0;
+  padding: 0; /* Remove extra padding */
+}
+
+.markdown-wrapper thead {
+  background-color: #f5f5f7;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.markdown-wrapper th {
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 2px solid #e0e0e0;
+  background-color: #f5f5f7;
+  white-space: nowrap; /* Prevent header text wrapping */
+  color: #333;
+}
+
+.markdown-wrapper td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  vertical-align: top; /* Align content to top */
+  line-height: 1.4;
+}
+
+.markdown-wrapper tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown-wrapper td:last-child,
+.markdown-wrapper th:last-child {
+  border-right: none;
+}
+
+.markdown-wrapper tr:nth-child(even) {
+  background-color: #f9f9fb;
+}
+
+/* Hover effect for rows */
+.markdown-wrapper tr:hover {
+  background-color: #f0f2f5;
+  transition: background-color 0.2s;
+}
+
+/* Bot message specific table styling */
+.message-bot .markdown-wrapper table {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* User message specific styling */
+.message-user .markdown-wrapper code,
+.message-user .markdown-wrapper pre {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.message-user .markdown-wrapper a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Ensure the react-markdown tree doesn't overflow */
+.markdown-wrapper > div {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .message-bot,
+  .message-user {
+    max-width: 90%; /* Slightly wider for smaller screens */
+  }
+  
+  .input-container {
+    width: 90%;
+  }
+
+  .markdown-wrapper table {
+    font-size: 13px; /* Smaller font for mobile */
+  }
+
+  .markdown-wrapper th,
+  .markdown-wrapper td {
+    padding: 8px 12px; /* Reduced padding for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .message-bot,
+  .message-user {
+    max-width: 95%;
+  }
+  
+  .input-container {
+    width: 95%;
+    padding: 8px;
+  }
+  
+  .chat-container {
+    padding: 16px;
+  }
+
+  .markdown-wrapper table {
+    font-size: 12px;
+  }
+
+  .markdown-wrapper th,
+  .markdown-wrapper td {
+    padding: 6px 10px;
+  }
+}

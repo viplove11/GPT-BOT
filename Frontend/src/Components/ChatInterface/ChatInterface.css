@@ -1,0 +1,137 @@
+/* Center the chat container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.icon{
+  font-size: 30px;
+}
+
+.author{
+  margin: 0;
+}
+
+.description{
+  font-style: normal;
+}
+
+.chat-message {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: none;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.chat-message.user {
+  background-color: #eae9e5; /* User message background */
+  align-self: flex-end;
+  width: fit-content;
+  text-align: right;
+  font-size: 20px;
+}
+
+.chat-message.response {
+  background-color: #eae9e5; /* Response message background */
+  align-self: flex-start;
+  width: fit-content;
+  font-size: 20px;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 600px;
+  /* border: 1px solid green; */
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+
+
+/* Style the chat messages area */
+.chat-messages {
+  height: 60%;
+  width: 60%;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  /* background-color: #ddd; */
+  border-radius: 8px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  padding: 10px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the input field at the bottom center */
+.chat-input {
+  /* border: 1px solid red;  */
+  margin-top: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 15%;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  border-radius: 24px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.input-container input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: black;
+  font-size: 18px;
+  padding: 10px;
+  outline: none;
+  
+}
+
+.input-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.input-buttons button {
+  background: transparent;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  transition: background-color 0.3s;
+  font-size: 20px;
+}
+
+.input-buttons button:hover {
+  color: #007bff;
+}

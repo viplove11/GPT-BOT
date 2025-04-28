@@ -194,5 +194,5 @@ async def chat_endpoint(request: ChatRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 # For testing purposes - this will be executed when the script is run directly
-if _name_ == "_main_":
+if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)

@@ -1,9 +1,9 @@
-Stage Name,Description,Responsible Party,Duration,Inputs,Outputs,Risks,Tools/Systems,Compliance Check
-Client Onboarding,Initial setup and registration of clients.,Client Services,1-2 days,Client documents,Client profile created,Identification issues,CRM,Yes
-Order Management,"Processing client orders, including receiving and validating them.",Trading Desk,1 day,Order request,Validated orders,Order errors,Trading software,Yes
-Trade Execution,Executing trades on behalf of clients.,Trading Desk,Real-time,Validated orders,Executed trades,Market volatility,Trading platform,Yes
-Settlement Processing,Finalizing trade transactions and processing settlements.,Operations,2-3 days,Executed trades,Settlements completed,Payment delays,Settlement system,Yes
-Risk Management,Assessing risks associated with trades.,Risk Management,Ongoing,Trade data,Risk assessments,Underestimation,Risk management tools,Yes
-Reporting,Generating investment reports and performance summaries for clients.,Reporting Team,Weekly/Monthly,Trade data,Reports produced,Misreporting,Reporting systems,Yes
-Account Maintenance,Ongoing management of client accounts.,Client Services,Ongoing,Client requests,Updated client accounts,Service delays,CRM,Yes
-Compliance Check,Verifying adherence to regulatory requirements and conducting audits.,Compliance Team,Per transaction,All outputs,Compliance verified,Regulatory breaches,Compliance software,Yes
+Stage Name,Description,Stakeholders,Duration,Tools Used,Inputs,Outputs,Compliance
+Application Development,Develop applications to manage and track securities transactions.,Development Team,2 months,Agile Methods,Client Requirements,Functional Application,N/A
+Order Intake,Receive and process client orders for buying and selling securities.,Sales Team,1 month,CRM Software,Client Orders,Order Confirmation,FINRA Regulations
+Trade Execution,Execute trades on the market as per client orders.,Trading Desk,1 week,Trading Platform,Client Orders,Executed Trades,SEC Regulations
+Post-Trade Processing,"Handle necessary post-trade activities, including confirmations and record-keeping.",Operations Team,2 weeks,Operational Software,Executed Trades,Confirmed Trades,Audit Standards
+Settlement,Ensure that trades are settled and all regulatory requirements are met.,Settlement Team,1 week,Settlement Systems,Confirmed Trades,Settled Transactions,Clearinghouse Rules
+Risk Management,Assess and mitigate risks associated with securities transactions.,Risk Management Team,Ongoing,Risk Assessment Tools,Market Data,Risk Reports,Risk Management Standards
+Compliance Monitoring,Monitor and ensure compliance with financial regulations.,Compliance Team,Ongoing,Compliance Tools,Regulatory Guidelines,Compliance Reports,SEC and FINRA Regulations
+Reporting,Generate necessary reports for stakeholders regarding securities performance and compliance.,Reporting Team,Monthly,Reporting Software,Performance Data,Stakeholder Reports,Regulatory Standards
